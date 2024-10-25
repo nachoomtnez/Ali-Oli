@@ -20,7 +20,7 @@ public class Ejercicio_25 {
 			break;
 		case 2 : 
 			 aleatorio = "TIJERAS";
-			 break;
+			 break; 
 		case 3 :
 			aleatorio = "PIEDRA";
 			break;

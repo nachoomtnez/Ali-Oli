@@ -38,9 +38,9 @@ public class Ejercicio_26 {
 		eleccion = sc.nextLine().toUpperCase();
 		sc.nextLine();
 		
-		if(eleccion.equals("PIEDRA") && aleatorio.equals("TIJERAS") ||
-	            eleccion.equals("TIJERAS") && aleatorio.equals("PAPEL") ||
-	            eleccion.equals("PAPEL") && aleatorio.equals("PIEDRA")){
+		if(     (eleccion.equals("PIEDRA") && aleatorio.equals("TIJERAS")) ||
+	            (eleccion.equals("TIJERAS") && aleatorio.equals("PAPEL")) ||
+	            (eleccion.equals("PAPEL") && aleatorio.equals("PIEDRA"))){
 				humano++;
 			 System.out.println("¡Ganaste!");
         } else if (eleccion.equals(aleatorio)) {

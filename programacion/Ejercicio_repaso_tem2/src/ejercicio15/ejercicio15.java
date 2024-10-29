@@ -1,4 +1,4 @@
-package ejercicio15;
+    package ejercicio15;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -14,7 +14,7 @@ public class ejercicio15 {
 		
 		Random ramdom = new Random();
 		int numeroAleatorio = ramdom.nextInt(10);
-		
+		 
 		boolean enc = false;
 		
 		while(!enc) {

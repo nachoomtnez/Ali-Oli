@@ -17,7 +17,7 @@ Scanner sc = new Scanner(System.in);
 			System.out.println("Introduzca el numero");
 			 numero[i] = sc.nextInt();
 			 
-		
+			 System.out.println(numero[i]);
 		}
 		
 		System.out.println("\n Numeros de menor a mayor");

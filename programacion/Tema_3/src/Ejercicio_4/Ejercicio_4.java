@@ -1,12 +1,11 @@
-package Ejercicio_3;
+package Ejercicio_4;
 import java.util.Scanner;
 
-public class Ejercicio_3 {
+public class Ejercicio_4 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-Scanner sc = new Scanner(System.in);
+	Scanner sc = new Scanner(System.in);
 		
 		System.out.println("Introduce cuantos numeros va a decir: ");
 		int num = sc.nextInt();
@@ -20,9 +19,10 @@ Scanner sc = new Scanner(System.in);
 		
 		}
 		
-		for(int i = 0 ; i < num; i++) {
+		for(int i = num-1 ; i > -1; i--) {
 			System.out.print(numero[i]+" ");
 		}
 	}
+	}
 
-}
+

@@ -52,11 +52,11 @@ public class Ejercico_19 {
 			
 			
 			
-			 exit = true;  // Asumimos que el jugador ha adivinado la palabra
+			 exit = true;  
 	            for (int i = 0; i < recorrido.length; i++) {
 	                if (recorrido[i].equals("_ ")) {
-	                    exit = false;  // Si algún "_" sigue, no hemos adivinado la palabra
-	                    break;  // Rompemos el ciclo porque no necesitamos seguir verificando
+	                    exit = false;  
+	                    break;  
 	                }
 	            }
 		

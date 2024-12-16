@@ -9,7 +9,7 @@ public class Ejercicio_3 {
 		
 		System.out.println("Introduce una frase");
 		String frase = sc.nextLine();
-		sc.nextLine();
+	
 		
 		System.out.println("Introduce que quieres hacer 1(poner en mayusculas) o 2 (poner en minuscula)");
 		String numero = sc.nextLine();

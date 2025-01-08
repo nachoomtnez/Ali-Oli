@@ -16,6 +16,8 @@ public class Ejercicio_6 {
 		int numero2 = sc.nextInt();
 		
 		int suma = Calculadora.suma(numero1,numero2);
+		
+		System.out.println(suma);
 	}
 
 }

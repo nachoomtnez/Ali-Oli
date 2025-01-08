@@ -15,7 +15,7 @@ public class Ejercicio_6 {
 		System.out.println("Introduce un segundo numero");
 		int numero2 = sc.nextInt();
 		
-		int suma = Ejercicio5.Ejercicio_5.suma(numero1,numero2);
+		int suma = Calculadora.suma(numero1,numero2);
 	}
 
 }

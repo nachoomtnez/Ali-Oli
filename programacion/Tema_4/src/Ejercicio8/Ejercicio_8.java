@@ -19,20 +19,21 @@ public class Ejercicio_8 {
 
 			System.out.println("Introduce un segundo numero");
 			int numero2 = sc.nextInt();
+			sc.nextLine();
 			
 			System.out.println("Introduce un identificador para el funcionamiento: ");
 			String cad = sc.nextLine();
 			
-			if(cad.equals("ADD")) {
+			if(cad.equalsIgnoreCase("ADD")) {
 				resul = Ejercicio5.Ejercicio_5.suma(numero1,numero2);
 				enc = true;
-			}else if(cad.equals("SUB")) {
+			}else if(cad.equalsIgnoreCase("SUB")) {
 				 resul = Ejercicio_7.Calculadora.resta(numero1,numero2);
 				 enc = true;
-			}else if(cad.equals("MUL")){
+			}else if(cad.equalsIgnoreCase("MUL")){
 				 resul = Ejercicio_7.Calculadora.mul(numero1,numero2);
 				 enc = true;
-			}else if(cad.equals("DIV")) {
+			}else if(cad.equalsIgnoreCase("DIV")) {
 				 resul = Ejercicio_7.Calculadora.div(numero1,numero2);
 				 enc = true;
 			}else {

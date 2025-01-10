@@ -21,7 +21,7 @@ public class Ejercicio_8 {
 			int numero2 = sc.nextInt();
 			sc.nextLine();
 			
-			System.out.println("Introduce un identificador para el funcionamiento: ");
+			System.out.println("Introduce un identificador para el funcionamiento: (add para sumar,sub para restar,mul para multiplicar, div para dividir");
 			String cad = sc.nextLine();
 			
 			if(cad.equalsIgnoreCase("ADD")) {

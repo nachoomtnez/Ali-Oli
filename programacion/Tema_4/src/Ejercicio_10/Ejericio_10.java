@@ -15,7 +15,9 @@ public class Ejericio_10 {
 			
 			for(int i = 0; i < cont; i++) {
 				System.out.println("¿Que palabra quieres meter?");
-				vector[i] = vector[i];
+				String hola = sc.nextLine();
+				
+				vector[i] = hola;
 			}
 			
 			System.out.println("¿Que palabra quieres?");

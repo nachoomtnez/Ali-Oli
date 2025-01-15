@@ -10,27 +10,26 @@ public class Ejercicio_18 {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		Alumno alumno1 = new Alumno("");
 		
 		System.out.println("¿cual es su dni?");
 		String dni = sc.nextLine();
 		
-		alumno1.setDni(dni);
-		
 		System.out.println("¿como se llama el alumno?");
 		String nombre = sc.nextLine();
-		
-		alumno1.setNombre(nombre);
 		
 		System.out.println("¿cual es la edad?");
 		int edad = sc.nextInt();
 		
-		alumno1.setEdad(edad);
+		Alumno alumno1 = new Alumno(dni,nombre,edad);
 		
 		System.out.println("¿cual es la nota?");
 		double nota = sc.nextDouble();
 		
-		alumno1.aprobar(nota);
+		System.out.println("¿a que curso pertenece?");
+		int cursillo = sc.nextInt();
+
+		
+		
 		
 		System.out.println(alumno1);
 	

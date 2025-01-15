@@ -1,12 +1,14 @@
 package Ejericio_18_y_adelante;
 
 public class Alumno extends Persona {
+	
 	private String dni; 
-	
 	private double nota;
+	private Curso curso;
 	
-	public Alumno(String dni, String nombre,int edad) {
-		
+
+	
+	public Alumno(String dni,String nombre,int edad) {
 		super(nombre,edad);
 		this.dni = dni;
 	}
@@ -16,7 +18,13 @@ public class Alumno extends Persona {
 		return dni;
 	}
 
-
+	public Curso getCurso() {
+		return curso;
+	}
+	
+	public void setCurso(Curso curso) {
+		this.curso = curso;
+	}
 
 	public void setDni(String dni) {
 		this.dni = dni;
@@ -38,7 +46,7 @@ public class Alumno extends Persona {
 
 	@Override
 	public String toString() {
-		return "Dni alumno:" + dni + ", nombre alumno=" + super.getNombre() + ", edad alumno=" + super.getEdad() + ", nota alumno=" + nota + "]";
+		return "Dni alumno:" + dni + ", nombre alumno=" + super.getNombre() + ", edad alumno=" + super.getEdad() + ", nota alumno=" + nota + "del curso :";
 	}
 	
 	

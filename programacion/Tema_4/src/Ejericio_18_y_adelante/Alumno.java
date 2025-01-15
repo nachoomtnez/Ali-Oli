@@ -8,9 +8,10 @@ public class Alumno extends Persona {
 	
 
 	
-	public Alumno(String dni,String nombre,int edad) {
+	public Alumno(String dni,String nombre,int edad,Curso curso) {
 		super(nombre,edad);
 		this.dni = dni;
+		this.curso = curso;
 	}
 	
 
@@ -46,7 +47,7 @@ public class Alumno extends Persona {
 
 	@Override
 	public String toString() {
-		return "Dni alumno:" + dni + ", nombre alumno=" + super.getNombre() + ", edad alumno=" + super.getEdad() + ", nota alumno=" + nota + "del curso :";
+		return "Dni alumno:" + dni + ", nombre alumno=" + super.getNombre() + ", edad alumno=" + super.getEdad() + ", nota alumno=" + nota + "del curso :"+getCurso();
 	}
 	
 	

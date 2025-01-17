@@ -1,6 +1,8 @@
 package Ejericio_18_y_adelante;
 import java.util.Scanner;
 
+import javax.swing.plaf.synth.SynthOptionPaneUI;
+
 
 
 public class Ejercicio_18 {
@@ -37,10 +39,19 @@ public class Ejercicio_18 {
 		
 		Alumno alumno1 = new Alumno(dni,nombre,edad,curso1,nota);
 		
-		System.out.println(alumno1);
+		System.out.println("Nombre del profesor");
+		String nombreP = sc.nextLine();
 		
-		Profesor p = new Profesor();
-	
+		System.out.println("Introduce la edad");
+		int edadP = sc.nextInt();
+		
+		Profesor p = new Profesor(nombreP,edadP);
+		
+		
+		System.out.println(alumno1);
+		System.out.println(p);
+		
+		
 	}
 
 }

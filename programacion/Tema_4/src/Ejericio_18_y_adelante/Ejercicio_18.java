@@ -35,9 +35,11 @@ public class Ejercicio_18 {
 		
 		Curso curso1 = new Curso(cursillo,descripcion);
 		
-		Alumno alumno1 = new Alumno(dni,nombre,edad,curso1);
+		Alumno alumno1 = new Alumno(dni,nombre,edad,curso1,nota);
 		
 		System.out.println(alumno1);
+		
+		Profesor p = new Profesor();
 	
 	}
 

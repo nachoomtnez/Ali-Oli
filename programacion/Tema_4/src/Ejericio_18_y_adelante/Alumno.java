@@ -8,10 +8,11 @@ public class Alumno extends Persona {
 	
 
 	
-	public Alumno(String dni,String nombre,int edad,Curso curso) {
-		super(nombre,edad);
+	public Alumno(String dni,String nombre,int edad,Curso curso,double nota) {
+		super();
 		this.dni = dni;
 		this.curso = curso;
+		this.nota = nota;
 	}
 	
 

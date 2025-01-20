@@ -12,32 +12,37 @@ public class Ejercicio_18 {
 		
 		Scanner sc = new Scanner(System.in);
 		
+		Alumno[] alumnos = new Alumno[3];
 		
-		System.out.println("¿cual es su dni?");
-		String dni = sc.nextLine();
+		Curso curso = new Curso(1,"DAM-DAW");
 		
-		System.out.println("¿como se llama el alumno?");
-		String nombre = sc.nextLine();
+		Alumno alumno1 = new Alumno("12345678a","julio",14,curso,3.0);
 		
-		System.out.println("¿cual es la edad?");
-		int edad = sc.nextInt();
+		Alumno alumno2 = new Alumno("12345678a","raul",14,curso,4.0);
+		
+		Alumno alumno3 = new Alumno("34567891c","marco",15,curso,5.0);
+		
+				
+		alumnos[0] = alumno1;
+		
+		alumnos[1] = alumno2;
+		
+		alumnos[2] = alumno3;
 		
 		
 		
-		System.out.println("¿cual es la nota?");
-		double nota = sc.nextDouble();
+		if(alumnos[0].equals(alumnos[1])) {
+			System.out.println("ERROR:DNI IGUALES");
+		}
+		if(alumnos[0].equals(alumnos[2])) {
+			System.out.println("ERROR:DNI IGUALES");
+		}
+		if(alumnos[1].equals(alumnos[2])) {
+			System.out.println("ERROR:DNI IGUALES");
+		}
+			
 		
 		
-		
-		System.out.println("¿a que curso pertenece?");
-		int cursillo = sc.nextInt();
-
-		System.out.println("opina");
-		String descripcion = sc.nextLine();
-		
-		Curso curso1 = new Curso(cursillo,descripcion);
-		
-		Alumno alumno1 = new Alumno(dni,nombre,edad,curso1,nota);
 		
 		System.out.println("Nombre del profesor");
 		String nombreP = sc.nextLine();

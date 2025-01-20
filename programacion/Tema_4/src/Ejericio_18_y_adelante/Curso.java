@@ -6,6 +6,9 @@ public class Curso {
 	
 	private String descripcion;
 	
+	public Curso() {
+		
+	}
 	public Curso(int identificador, String descripcion) {
 		
 		this.identificador = identificador;
@@ -27,6 +30,7 @@ public class Curso {
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
+	
 
 	@Override
 	public String toString() {

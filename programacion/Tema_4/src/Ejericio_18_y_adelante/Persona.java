@@ -6,7 +6,12 @@ public class Persona {
 	private String nombre;
 	private int edad;
 
-
+	public Persona() {
+		
+	}
+	public Persona(String nombre, int edad) {
+		// TODO Auto-generated constructor stub
+	}
 	public String getNombre() {
 		return nombre;
 	}

@@ -2,14 +2,14 @@ package Ejericio_18_y_adelante;
 
 public class Curso {
 	
-	private int identificador;
+	private Integer identificador;
 	
 	private String descripcion;
 	
 	public Curso() {
 		
 	}
-	public Curso(int identificador, String descripcion) {
+	public Curso(Integer identificador, String descripcion) {
 		
 		this.identificador = identificador;
 		this.descripcion = descripcion;
@@ -19,7 +19,7 @@ public class Curso {
 		return identificador;
 	}
 
-	public void setIdentificador(int identificador) {
+	public void setIdentificador(Integer identificador) {
 		this.identificador = identificador;
 	}
 

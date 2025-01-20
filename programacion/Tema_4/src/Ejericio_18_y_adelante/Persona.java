@@ -3,13 +3,13 @@ package Ejericio_18_y_adelante;
 public class Persona {
 	
 
-	private String nombre;
-	private int edad;
+	protected String nombre;
+	protected Integer edad;
 
 	public Persona() {
 		
 	}
-	public Persona(String nombre, int edad) {
+	public Persona(String nombre, Integer edad) {
 		// TODO Auto-generated constructor stub
 	}
 	public String getNombre() {

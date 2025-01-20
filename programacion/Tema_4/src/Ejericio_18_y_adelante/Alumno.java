@@ -6,14 +6,14 @@ import java.util.regex.Pattern;
 public class Alumno extends Persona {
 	
 	private String dni; 
-	private double nota;
+	private Double nota;
 	private Curso curso;
 	
 	public Alumno(){
 		
 	}
 	
-	public Alumno(String dni,String nombre,int edad,Curso curso,double nota) {
+	public Alumno(String dni,String nombre,Integer edad,Curso curso,Double nota) {
 		super(nombre, edad);
 		this.dni = dni;
 		this.curso = curso;
@@ -43,12 +43,12 @@ public class Alumno extends Persona {
 
 
 
-	public void setNota(double nota) {
+	public void setNota(Double nota) {
 		this.nota = nota;
 	}
 
-	public void aprobar(double nota) {
-		this.nota = 5;
+	public void aprobar(Double nota) {
+		this.nota = 5.0;
 	}
 	
 	public boolean equals(Object o) {
@@ -89,8 +89,8 @@ public class Alumno extends Persona {
 		
 		if(validarDni() == true) {
 			if(curso != null) {
-				if(getNombre() != null && getNombre().length() > 10) {
-					if(getEdad() != null && getEdad() <= 65 && getEdad() >= 12) {
+				if(nombre != null && nombre.length() > 10) {
+					if( edad != null && edad <= 65 && edad >= 12) {
 						cmp = true;
 					}
 				}

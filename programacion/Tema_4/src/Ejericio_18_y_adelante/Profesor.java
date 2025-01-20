@@ -5,7 +5,7 @@ public class Profesor extends Persona{
 	public Profesor() {
 		
 	}
-	public Profesor(String nombre, int edad) {
+	public Profesor(String nombre, Integer edad) {
 		super(nombre,edad);
 	}
 

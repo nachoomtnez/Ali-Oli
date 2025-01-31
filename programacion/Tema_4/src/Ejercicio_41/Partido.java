@@ -44,9 +44,6 @@ public class Partido {
 		else if(resultado.isVictoriaVisitante()) {
 			return equipoVisitante;
 		}
-		else if(resultado.isEmpate()) {
-			return null;
-		}
 		return null;
 	}
 	

@@ -30,6 +30,11 @@ public class Ropa extends Articulo{
 	public void setTalla(String talla) {
 		this.talla = talla;
 	}
+
+	@Override
+	public String toString() {
+		return "Ropa [color=" + color + ", talla=" + talla + "]";
+	}
 	
 	
 }

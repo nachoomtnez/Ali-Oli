@@ -18,6 +18,11 @@ public class Libro extends Articulo{
 	public void setAutor(String autor) {
 		this.autor = autor;
 	}
+
+	@Override
+	public String toString() {
+		return "Libro [autor=" + autor + "]";
+	}
 	
 	
 }

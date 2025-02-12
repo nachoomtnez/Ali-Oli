@@ -3,7 +3,7 @@ package Ejercicio_47;
 public class Articulo {
 	
 	private String descripcion;
-	private double precio;
+	private Double precio;
 	
 	
 	

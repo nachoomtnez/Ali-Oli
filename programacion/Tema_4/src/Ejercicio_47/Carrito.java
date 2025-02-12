@@ -42,11 +42,16 @@ public class Carrito {
 
 	
 	public void getCantidad() {
-		
+		articulos.size();
 	}
 	
-	public void getTotal() {
+	public double getTotal() {
+		double total = 0;
+		for(int i = 0; i < articulos.size(); i++) {
+			total += articulos.get(i).getPrecio();
+		}
 		
+		return total;
 	}
 	
 	public void getPrecioMedio() {

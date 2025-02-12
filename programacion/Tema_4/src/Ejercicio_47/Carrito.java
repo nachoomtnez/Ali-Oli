@@ -41,8 +41,8 @@ public class Carrito {
 	}
 
 	
-	public void getCantidad() {
-		articulos.size();
+	public double getCantidad() {
+		return articulos.size();
 	}
 	
 	public double getTotal() {
@@ -54,7 +54,10 @@ public class Carrito {
 		return total;
 	}
 	
-	public void getPrecioMedio() {
+	public double getPrecioMedio() {
+		double precio_medio = 0;
+		
+		return precio_medio = getTotal()/getCantidad();
 		
 	}
 	

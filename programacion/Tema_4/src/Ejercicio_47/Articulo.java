@@ -15,15 +15,11 @@ public class Articulo {
 	public String getDescripcion() {
 		return descripcion;
 	}
-	public void setDescripcion(String descripcion) {
-		this.descripcion = descripcion;
-	}
+	
 	public double getPrecio() {
 		return precio;
 	}
-	public void setPrecio(double precio) {
-		this.precio = precio;
-	}
+	
 	@Override
 	public String toString() {
 		return "Articulo [descripcion=" + descripcion + ", precio=" + precio + "]";

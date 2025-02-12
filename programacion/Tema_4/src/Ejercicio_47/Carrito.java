@@ -41,7 +41,27 @@ public class Carrito {
 	}
 
 	
+	public void getCantidad() {
+		
+	}
 	
+	public void getTotal() {
+		
+	}
 	
+	public void getPrecioMedio() {
+		
+	}
 	
+	public void addArticulo() {
+		
+	}
+	
+	public void borrarArticulo() {
+		
+	}
+	
+	public void vaciarCesta() {
+		
+	}
 }

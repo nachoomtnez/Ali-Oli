@@ -1,5 +1,6 @@
-package Ejercicio_47;
+package Ejercicio_52;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -11,8 +12,6 @@ public class Carrito {
 	private ArrayList<Articulo> articulos;
 	
 	private Cliente cliente;
-
-	private LocalDate fechaActualizacion;
 
 	public Carrito(LocalDate fecha_creacion, LocalDate fecha_ultimoCambio, ArrayList<Articulo> articulos,
 			Cliente cliente) {
@@ -47,35 +46,37 @@ public class Carrito {
 		return articulos.size();
 	}
 	
-	public double getTotal() {
-		double total = 0;
-		for(int i = 0; i < articulos.size(); i++) {
-			total += articulos.get(i).getPrecio();
+	public BigDecimal getTotal() {
+		BigDecimal total = new BigDecimal("0");
+
+		for(Articulo articulo : articulos) {
+			total = total.add(articulo.getPrecio());
 		}
 		
 		return total;
 	}
 	
+	 public BigDecimal getPrecioMedio() {
+	        BigDecimal precio_medio = BigDecimal.ZERO;
+	        if (getCantidad() > 0) {
+	            precio_medio = getTotal().divide(BigDecimal.valueOf(getCantidad()), BigDecimal.ROUND_HALF_UP);
+	        }
+	        return precio_medio;
+	    }
 	
-	public double getPrecioMedio() {
-		double precio_medio = 0;
-		
-		return precio_medio = getTotal()/getCantidad();
-		
+	public void addArticulo(Articulo art) {
+		articulos.add(art);
+        fecha_ultimoCambio = LocalDate.now(); 
 	}
 	
-	public void addArticulo(Articulo articulos) {
-		this.articulos.add(articulos);
-		this.fechaActualizacion= LocalDate.now();
-	}
+	public void borrarArticulo(Articulo art) {
+		 articulos.remove(art);
+	        fecha_ultimoCambio = LocalDate.now(); 
+    }
 	
-	public void borrarArticulo(Integer entero) {
-		this.articulos.remove(entero);	
-		this.fechaActualizacion= LocalDate.now();
-	}
 	
-	public void vaciarCesta () {
-		this.articulos.clear();
-		this.fechaActualizacion= LocalDate.now();
+	public void vaciarCesta() {
+	    articulos.clear();
+        fecha_ultimoCambio = LocalDate.now(); // Update last change date
 	}
 }

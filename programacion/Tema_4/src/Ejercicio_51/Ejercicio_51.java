@@ -15,14 +15,16 @@ public class Ejercicio_51 {
 		
 		
 		while(numeros.size()<5) {
+			
 			System.out.println("Dame un numero");
 			BigDecimal num = sc.nextBigDecimal();
 			
 			if(!numeros.isEmpty()) {
+				
 				BigDecimal ultimo = numeros.get(numeros.size()-1);
 			}
-			if(numeros.compareTo(ultimo)>0) {
-				num.add(num);
+			if(num.compareTo(ultimo)>0) {
+				numeros.add(num);
 			}
 			else {
 				System.out.println("No es mayor que eñ anterior");

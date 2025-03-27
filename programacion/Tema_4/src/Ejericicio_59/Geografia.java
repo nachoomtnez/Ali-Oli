@@ -6,8 +6,6 @@ public class Geografia {
 
 		private Map<String,String> mapa = new HashMap<>();
 		
-		
-		
 		public boolean agregarPais(String pais,String capital) {
 			
 			boolean estar = false;
@@ -55,9 +53,16 @@ public class Geografia {
 		}
 		
 		public void borrarPais(String pais) {
-			pais = pais.toUpperCase();
-			mapa.remove(pais);
+			Iterator<Map.Entry<String, String>> borrar = mapa.entrySet().iterator();
+			while (borrar.hasNext()) {
+		        Map.Entry<String, String> entry = borrar.next();	    
+		        if (entry.getKey().equalsIgnoreCase(pais)) {
+		            borrar.remove();
+		            break;
+		        }
+			}
 		}
+		
 		
 		public Double calcularLongitudMediaPaises() {
 			
@@ -72,14 +77,16 @@ public class Geografia {
 		}
 		
 		public void eliminarPaisConCapitalLetra(String letra) {
-			Set<Entry<String, String>> pares = mapa.entrySet();
 			
-			for(Entry<String, String> par : pares) {
-				if(par.getKey().startsWith(letra)) {
-					
-					break;
-				}
+			Iterator<Map.Entry<String, String>> borrar = mapa.entrySet().iterator();
+			while (borrar.hasNext()) {
+		        Map.Entry<String, String> entry = borrar.next();	    
+		        if (entry.getKey().equalsIgnoreCase(letra)) {
+		            borrar.remove();
+		            break;
+		        }
 			}
+		
 		}
 		
 		public Integer numeroPaisConCapitalLetra(String letra) {

@@ -19,6 +19,8 @@ public class App {
 		// TODO Auto-generated method stub
 			
 		Persona p1 = new Persona ();
+		
+		//creamos un elemento de la categoria personaservice para poder usar los metodos de esta
 		PersonaService ps = new PersonaService();
 		List<Persona> lista = new ArrayList<>();
 		
@@ -43,6 +45,7 @@ public class App {
 		    case 1:
 		        System.out.println("¿Cual es el dni de la persona?");
 		        String dni = sc.nextLine();
+		        //llamamos al metodo buscar persona de la clase personaService y le pasamos el dni para que busque
 		        System.out.println(ps.buscarPersona(dni));
 		        break;
 		    case 2:
@@ -68,7 +71,7 @@ public class App {
 		    	
 		    	System.out.println("Introduce fecha nacimiento");
 		    	String fnacimiento_agregar = sc.nextLine();
-		    	
+		    	//instruccion importante para el formato de una fecha
 		    	DateTimeFormatter format = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		    	
 		    	
@@ -78,6 +81,7 @@ public class App {
 		    	p.setDni(dni_agregar);
 		    	p.setNombre(nombre_agregar);
 		    	p.setApellidos(apellidos_agregar);
+		    	//llevar al examen este cacho de codigo para la hora de las fechas
 		    	try {
 		    		LocalDate fechaNacimiento = LocalDate.parse(fnacimiento_agregar, format);
 		    		p.setFecha_nacimiento(fechaNacimiento);

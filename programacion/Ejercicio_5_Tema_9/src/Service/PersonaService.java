@@ -65,27 +65,6 @@ public class PersonaService extends OpenConection{
 				stmt.execute();
 			}
 		}
-		
-		public void actualizarPersona(Persona p,String cadena,String variacion) throws SQLException{
-			String sql = "UPDATE PERSONAS SET NOMBRE = ?,APELLIDOS = ?,FECHA_NACIMIENTO =? WHERE DNI = ? ";
-			
-			try (Connection conn = openConn.getNewConnection(); PreparedStatement stmt = conn.prepareStatement(sql)){
-				stmt.setString(1, p.getNombre());
-				stmt.setString(2,p.getApellidos());
-				stmt.setDate(3,Date.valueOf(p.getFecha_nacimiento()));
-				stmt.setString(4, p.getDni());
-			}
-		}
-		
-		public void borrarPersona(String dni) throws SQLException {
-			String sql ="DELETE FROM PERSONAS WHERE DNI = ?";
-			
-			try(Connection conn = openConn.getNewConnection();PreparedStatement stmt = conn.prepareStatement(sql)){
-				stmt.setString(1, dni);
-				
-				 
-			}
-		}
 }
 
 	

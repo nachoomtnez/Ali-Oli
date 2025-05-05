@@ -11,6 +11,8 @@ import java.util.Scanner;
 import Service.PersonaService;
 import modelo.Persona;
 
+
+
 public class App {
 
 	public static void main(String[] args) throws SQLException {
@@ -30,8 +32,6 @@ public class App {
 			System.out.println("(1) Buscar una persona por DNI");
 			System.out.println("(2) BUscar persona por nombre/Apellido");
 			System.out.println("(3) Insertar una nueva persona");
-			System.out.println("(4) Actualizar datos de una persona");
-			System.out.println("(5) Borrar una persona");
 			System.out.println("(0) Salir");
 			System.out.println("-----------------------------------------");
 			
@@ -92,52 +92,12 @@ public class App {
 		    		exit = true;
 		    	}
 		    	
-		    	break;
-		    case 4:
-		    	
-		    	sc.nextLine();
-		    	System.out.println("Introduce el dni de la persona que quieras actualizar");
-		    	String dni_act = sc.nextLine();
-		    	
-		    	System.out.println("Introduce el nuevo dni");
-		    	String dni_act2 = sc.nextLine();
-		    	
-		    	System.out.println("Introduce el nuevo dni");
-		    	String nombre_act = sc.nextLine();
-		    	
-		    	System.out.println("Introduce el nuevo dni");
-		    	String apellidos_act = sc.nextLine();
-		    	
-		    	System.out.println("Introduce nueva fecha nacimiento");
-		    	String fecha_act = sc.nextLine();
-		    	
-		    	DateTimeFormatter formato_act = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-		    	
-		    	Persona p2 = new Persona();
-		    	p2.setDni(dni_act2);
-		    	p2.setNombre(nombre_act);
-		    	p2.setApellidos(apellidos_act);
-		    	
-		    	try {
-		    		LocalDate fechaNacimiento = LocalDate.parse(fecha_act, formato_act);
-		    		p2.setFecha_nacimiento(fechaNacimiento);
-		    	}catch(DateTimeParseException e){
-		    		System.out.println("Fecha no correcta");
-		    		exit = true;
-		    	}
-		    	break;
-		    	 	
-		    case 5:
-		    	System.out.println("Introduce el dni de la persona que deseas borrar");
-		    	String dni_delete = sc.nextLine();
-		    	
-		    	ps.borrarPersona(dni_delete);
-		    	break;
+		    	break; 
 		    default:
 		        System.out.println("Introduce un valor valido");
 		}
 		}
-		
+	
 	
 		System.out.println(ps.buscarPersona("Pera"));
 		

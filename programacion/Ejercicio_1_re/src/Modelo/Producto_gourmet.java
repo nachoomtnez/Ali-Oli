@@ -10,6 +10,18 @@ public class Producto_gourmet {
 	private BigDecimal precio;
 	private Boolean disponible;
 	
+	public Producto_gourmet(){
+		
+	}
+	
+	public Producto_gourmet(Integer id, String nombre, String tipo, BigDecimal precio, Boolean disponible) {
+		super();
+		this.id = id;
+		this.nombre = nombre;
+		this.tipo = tipo;
+		this.precio = precio;
+		this.disponible = disponible;
+	}
 	public Integer getId() {
 		return id;
 	}
